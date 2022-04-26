@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"/>
+
+        <!-- RecyclerView with horizontal orientation to show next 24 hours forecasts -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_hours_forecast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-7dp"
+            android:background="@drawable/shape_transparent_rounded_background"
+            android:clipToPadding="false"
+            android:padding="@dimen/small_space"
+            tools:itemCount="8"
+            tools:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/hours_result"
+            tools:orientation="horizontal"
+            tools:scrollbars="horizontal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_days_forecast"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/small_space"
+            android:layout_marginRight="@dimen/small_space"
+            android:layout_marginBottom="@dimen/small_space"
+            android:layout_weight="1"
+            android:background="@drawable/shape_transparent_rounded_background"
+            android:clipToPadding="false"
+            android:padding="@dimen/small_space"
+            tools:listitem="@layout/day_result" />
+
+    </LinearLayout>
+</ScrollView>

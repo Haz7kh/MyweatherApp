@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My weather App</string>
+    <string name="cityName">Stockholm</string>
+    <string name="datePrim">Today, April 19</string>
+    <string name="_19">19°</string>
+    <string name="_19_10">19° \\ 10°</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="api_key">6b93bdd9a00318bf2e07e8f767f19a4f</string>
+    <string name="pref_location_default">Stockholm</string>
+</resources>
